@@ -89,9 +89,9 @@ body {
     .key:nth-of-type(9n+5).playing {
       background-color: #6254b2; }
   .key:nth-of-type(9n+6) {
-    background-color: #210E4A; }
+    background-color: #0C567B; }
     .key:nth-of-type(9n+6).playing {
-      background-color: #170a35; }
+      background-color: #0a4664; }
   .key:nth-of-type(9n+7) {
     background-color: #DF4A32; }
     .key:nth-of-type(9n+7).playing {
@@ -111,5 +111,12 @@ body {
 
 h1 {
   font-size: 3em; }
+
+.header {
+  font-size: 1.5em;
+  color: #210E4A;
+  text-align: center;
+  width: 100%;
+  margin-top: 50px; }
 
 /*# sourceMappingURL=main.css.map */
