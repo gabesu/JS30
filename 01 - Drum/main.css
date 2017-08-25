@@ -1,0 +1,115 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: 'Baloo Bhaijaan', cursive; }
+
+.keys {
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center; }
+
+.key {
+  width: 30%;
+  height: 150px;
+  margin-top: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 0 black;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: white;
+  transition: all ease-in 0.05s; }
+  .key:nth-of-type(9n+1) {
+    background-color: #1DC6CC; }
+    .key:nth-of-type(9n+1).playing {
+      background-color: #1ab0b6; }
+  .key:nth-of-type(9n+2) {
+    background-color: #FE5D70; }
+    .key:nth-of-type(9n+2).playing {
+      background-color: #fe445a; }
+  .key:nth-of-type(9n+3) {
+    background-color: #FFDB01; }
+    .key:nth-of-type(9n+3).playing {
+      background-color: #e7c600; }
+  .key:nth-of-type(9n+4) {
+    background-color: #23C678; }
+    .key:nth-of-type(9n+4).playing {
+      background-color: #1fb06b; }
+  .key:nth-of-type(9n+5) {
+    background-color: #7266BA; }
+    .key:nth-of-type(9n+5).playing {
+      background-color: #6254b2; }
+  .key:nth-of-type(9n+6) {
+    background-color: #210E4A; }
+    .key:nth-of-type(9n+6).playing {
+      background-color: #170a35; }
+  .key:nth-of-type(9n+7) {
+    background-color: #DF4A32; }
+    .key:nth-of-type(9n+7).playing {
+      background-color: #d63a21; }
+  .key:nth-of-type(9n+8) {
+    background-color: #E98B39; }
+    .key:nth-of-type(9n+8).playing {
+      background-color: #e67e22; }
+  .key:nth-of-type(9n+9) {
+    background-color: #34DBB2; }
+    .key:nth-of-type(9n+9).playing {
+      background-color: #25d1a6; }
+  .key.playing {
+    box-shadow: none;
+    transform: translateY(20px);
+    color: black; }
+
+h1 {
+  font-size: 3em; }
+
+/*# sourceMappingURL=main.css.map */

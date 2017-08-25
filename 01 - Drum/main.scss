@@ -1,0 +1,58 @@
+	@import "reset";
+	/// Sass Stuff
+	$keyColors: #1DC6CC,
+	#FE5D70,
+	#FFDB01,
+	#23C678,
+	#7266BA,
+	#210E4A,
+	#DF4A32,
+	#E98B39,
+	#34DBB2;
+	$keyColorsLength: length($keyColors);
+	/// Sass stuff end
+	body {
+		font-family: 'Baloo Bhaijaan', cursive;
+		//		/background: lighten(#FB9468, 30%);
+	}
+	
+	.keys {
+		width: 600px;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		text-align: center;
+	}
+	
+	.key {
+		width: 30%;
+		height: 150px;
+		margin-top: 30px;
+		border-radius: 20px;
+		box-shadow: 0 10px 0 black;
+		cursor: pointer;
+		align-items: center;
+		justify-content: center;
+		display: flex;
+		color: white;
+		transition: all ease-in 0.05s;
+		// sass bg color function
+		@for $i from 1 through $keyColorsLength {
+			&:nth-of-type(#{$keyColorsLength}n+#{$i}) {
+				background-color: nth($keyColors, $i);
+				&.playing {
+					background-color: darken(nth($keyColors, $i), 5%);
+				}
+			}
+		}
+		&.playing {
+			box-shadow: none;
+			transform: translateY(20px);
+			color: black;
+		}
+	}
+	
+	h1 {
+		font-size: 3em;
+	}
