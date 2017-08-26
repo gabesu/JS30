@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Clock</title>
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+	<div class="clock">
+		<div class="clock-face">
+			<div class="mid"></div>
+			<div class="hand hour-hand"></div>
+			<div class="hand min-hand"></div>
+			<div class="hand sec-hand"></div>
+		</div>
+	</div>
+
+	<script>
+		const secHand = document.querySelector('.sec-hand');
+		const minHand = document.querySelector('.min-hand');
+		const hourHand = document.querySelector('.hour-hand');
+
+		function setDate() {
+			const now = new Date();
+			const sec = now.getSeconds();
+			const secDegrees = ((sec / 60) * 360) + 90;
+			secHand.style.transform = `rotate(${secDegrees}deg)`;
+
+			const min = now.getMinutes();
+			const minDegrees = ((min / 60) * 360) + 90;
+			minHand.style.transform = `rotate(${minDegrees}deg)`;
+
+			const hour = now.getHours();
+			const hourDegrees = ((hour / 12) * 360) + 90;
+			hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+
+
+			// fixes bug that makes secHand rotate round to get to 1sec
+			if (sec == 59) {
+				setTimeout(function() {
+					secHand.style.transition = "none";
+				}, 1000);
+			} else {
+				secHand.style.transition = "all 300ms cubic-bezier(0.81, 0.05, 0, 2.24)";
+			}
+		}
+
+		setInterval(setDate, 1000);
+
+	</script>
+</body>
+
+</html>
